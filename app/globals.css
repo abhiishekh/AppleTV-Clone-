@@ -17,6 +17,33 @@
   --text-3xl: 1.75rem; /* 28px */
   --text-4xl: 2.5rem; /* 40px */
   --text-5xl: 4.5rem; /* 72px */
+  --text-6xl:6rem;
+  --text-7xl:6.2rem;
+
+  --line-height-5xl: 1.05; 
+  --line-height-4xl: 1.1;
+  --line-height-lg: 1.21;
+
+  --header-row-height: 44px;  
+  --header-height: calc(var(--header-row-height) * 2);
+  --hero-height: calc(100svh - var(--header-height)); 
+
+  /* // Breakpoint  */
+
+  --breakpoint-3xl: 120rem;
+
+  
+}
+
+@layer utilities {
+  @keyframes carousel-move {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  .animate-carousel {
+    animation: carousel-move var(--duration,80s) infinite ;
+  }
 }
 
 body {
