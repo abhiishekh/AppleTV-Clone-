@@ -20,7 +20,7 @@ const Products = () => {
 
                     
                     <Link href={''}>
-                    <p className='text-blue-400 sm:text-blue-700 text-sm lg:text-xl font-medium text-center hover:underline underline-offset-4 underline-blue-500. flex items-center gap-1'>{item.link}
+                    <p className='text-blue-400 sm:text-blue-400 text-sm lg:text-xl font-medium text-center hover:underline underline-offset-4 underline-blue-500. flex items-center gap-1'>{item.link}
                       {/* <span> {item.link? <ArrowUpRight/>:''} </span>  */}
                     </p>
                     </Link>

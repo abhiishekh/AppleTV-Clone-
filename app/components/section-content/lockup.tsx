@@ -32,7 +32,7 @@ export const Lockup = () =>{
         <div className="w-full h-auto flex flex-col items-center justify-center ">
             <h1 className="w-full sm:w-1/2 text-4xl 3xl:text-5xl text-textblack font-semibold text-center">See it on your smart TV or streaming device.</h1>
             <Link href={''}>
-            <p className="text-sm lg:text-xl mt-8 text-blue-400 font-medium sm:text-blue-700 flex gap-1 items-center">Set up your device <span><ChevronRight/></span></p>
+            <p className="text-sm lg:text-xl mt-8 text-blue-400 font-medium sm:text-blue-400 flex gap-1 items-center">Set up your device <span><ChevronRight/></span></p>
             </Link>
         </div>
 
