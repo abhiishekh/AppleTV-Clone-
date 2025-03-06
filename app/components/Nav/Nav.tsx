@@ -14,8 +14,10 @@ const Nav = () => {
 
     <Link href="/" className='flex h-11 items-center px-6 -ml-12 sm:-ml-6'><FaApple className='text-xl'/> <span className='sr-only'>Back to homepage</span></Link>
 
-    <div className='md:hidden flex gap-8 '>
+    <div className='md:hidden flex gap-4 sm:gap-8 items-center -mr-6 sm:mr-0'>
       <Search className='w-4 cursor-pointer'/>
+      <ShoppingBag className='w-4 cursor-pointer'/>
+      <TbMenu className='w-8 cursor-pointer'/>
 
     </div>
 
@@ -36,7 +38,7 @@ const Nav = () => {
       </ul>
 
     </div>
-    <div className='flex items-center gap-8'>
+    <div className='hidden md:flex items-center gap-4 sm:gap-8'>
 
         <ShoppingBag className='w-4 cursor-pointer'/>
       <TbMenu className='w-8 cursor-pointer'/>

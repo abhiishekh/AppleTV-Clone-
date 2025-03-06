@@ -45,7 +45,7 @@ export const Hero = () => {
           whileInView="visible"
           exit="hidden"
           animate="hidden"
-          viewport={{ amount: 1 }}
+          viewport={{ amount: 0.8 }}
           className="flex h-full flex-col justify-end items-start"
         >
           <h1 className="text-4xl 2 xl:text-6xl font-bold mb-10">
