@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "./components/Container";
 import { Hero } from "./components/section/hero";
 import Usps from "./components/section/Usps";

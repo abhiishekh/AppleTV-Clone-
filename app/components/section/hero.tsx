@@ -7,7 +7,6 @@ import img from "@/public/images/airplane.webp";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
-import Image from "next/image";
 
 export const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);

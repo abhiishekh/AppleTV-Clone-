@@ -1,9 +1,10 @@
-import { Apple, Search, ShoppingBag } from 'lucide-react'
+import { Search, ShoppingBag } from 'lucide-react'
 import React from 'react'
 import { FaApple } from 'react-icons/fa'
 import { Container } from '../Container'
 import { Button } from '../button'
 import { TbMenu } from 'react-icons/tb'
+import Link from 'next/link'
 
 const Nav = () => {
   return (
@@ -11,7 +12,7 @@ const Nav = () => {
    <header className='bg-backgroundContrast px-6 text-white  '>
     <Container className='flex items-center min-h-11 justify-between '>
 
-    <a href="/" className='flex h-11 items-center px-6 -ml-12 sm:-ml-6'><FaApple className='text-xl'/> <span className='sr-only'>Back to homepage</span></a>
+    <Link href="/" className='flex h-11 items-center px-6 -ml-12 sm:-ml-6'><FaApple className='text-xl'/> <span className='sr-only'>Back to homepage</span></Link>
 
     <div className='md:hidden flex gap-8 '>
       <Search className='w-4 cursor-pointer'/>

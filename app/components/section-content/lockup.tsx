@@ -4,7 +4,6 @@ import appleTv from '@/public/images/appleTv.png'
 import Products from "./Products"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
-import { Brands } from "./brands"
 
 export const Lockup = () =>{
     return (

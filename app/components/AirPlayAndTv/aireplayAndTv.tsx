@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Container } from "../Container";
 import { Button } from "../button";
 import { ChevronRight } from "lucide-react";
@@ -13,8 +12,8 @@ export const AirPlayAndTv = () => {
           {/* //1 */}
           <div className="flex flex-col items-center pt-24 sm:w-[400px]">
             <div className="w-32 h-16">
-              <Image
-                src={tv}
+              <img
+                src={tv.src}
                 alt="tv"
                 className="w-full h-full object-contain"
               />
@@ -35,8 +34,8 @@ export const AirPlayAndTv = () => {
           {/* //2 */}
 
           <div className="w-full -mg-24 sm:-mb-24 h-96 sm:h-[800px]">
-            <Image
-              src={remote}
+            <img
+              src={remote.src}
               alt="appleTv-remote"
               className="w-full h-full object-contain"
             />
@@ -62,8 +61,8 @@ export const AirPlayAndTv = () => {
           {/* //2 */}
 
           <div className="w-full -mb-28 sm:mb-0 h-[800px]  mx-auto">
-            <Image
-              src={aireplay}
+            <img
+              src={aireplay.src}
               alt="appleTv-remote"
               className="w-full h-full object-contain"
             />

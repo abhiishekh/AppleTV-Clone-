@@ -22,8 +22,8 @@ export const AppleMusic = () => {
             </div>
           </div>
           <div className="col-span-1 pt-24">
-            <Image
-              src={appleMusic}
+            <img
+              src={appleMusic.src}
               alt="bundleimage"
               className="w-full h-full object-contain"
             />

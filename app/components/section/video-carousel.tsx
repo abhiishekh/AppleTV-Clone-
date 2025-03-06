@@ -8,7 +8,7 @@ import {
   randomMoviesSet2,
 } from "@/app/movies";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useMemo, useRef, useState } from "react";
+import { useMemo, useRef } from "react";
 import { useWindowSize } from "react-use";
 import { Button } from "../button";
 import { Play } from "lucide-react";

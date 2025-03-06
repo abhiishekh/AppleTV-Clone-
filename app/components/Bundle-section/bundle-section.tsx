@@ -12,16 +12,16 @@ export const BundleSection = () => {
       <Container className="max-w-[1500px]">
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 ">
           <div className="col-span-1 py-24">
-            <Image
-              src={bundelImage}
+            <img
+              src={bundelImage.src}
               alt="bundleimage"
               className="w-full h-full object-contain"
             />
           </div>
           <div className="flex  flex-col py-24 items-center ">
             <div className="w-36 h-16 ">
-              <Image
-                src={appleone}
+              <img
+                src={appleone.src}
                 alt="appleOne logo"
                 className="w-full h-full object-contain"
               />

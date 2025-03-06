@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import {data} from '@/app/section'
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
 interface data {
     poster:string | any;
     title:string;
