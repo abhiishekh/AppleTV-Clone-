@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import bundelImage from "@/public/images/bundle.jpg";
 import appleone from "@/public/images/appleone.png";
 import { Container } from "../Container";

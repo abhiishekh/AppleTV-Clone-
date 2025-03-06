@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { Container } from "../Container";
 import appleMusic from "@/public/images/appleStudent.jpg";
 import { Button } from "../button";

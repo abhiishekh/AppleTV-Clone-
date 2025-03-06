@@ -1,9 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import {data} from '@/app/section'
 import Link from 'next/link';
 interface data {
-    poster:string | any;
+    poster:string | StaticImageData;
     title:string;
     link?:string;
 }
