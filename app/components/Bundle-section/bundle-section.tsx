@@ -8,7 +8,7 @@ import { ChevronRight } from "lucide-react";
 
 export const BundleSection = () => {
   return (
-    <div className="px-8 w-full h-auto mt-28  bg-[#EEEDF0]/60">
+    <div className="px-8 w-full h-auto mt-28  bg-[#EEEDF0]/60 mx-auto">
       <Container className="max-w-[1500px]">
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 ">
           <div className="col-span-1 py-24">
@@ -27,10 +27,10 @@ export const BundleSection = () => {
               />
             </div>
 
-            <h1 className="text-[2.8rem] leading-12 w-full sm:w-4/6 mt-4 text-textblack font-bold text-center tracking-tighter">
+            <h1 className="text-[2.3rem] sm:text-[2.8rem] leading-12 w-full sm:w-4/6 mt-4 text-textblack font-bold text-center tracking-tighter">
               Bundle Apple TV+ with up to five other great services.
             </h1>
-            <h1 className="text-[2.8rem]  w-4/6 -mt-2 text-textblack font-bold text-center tracking-tighter">
+            <h1 className="text-[2.3rem]  sm:text-[2.8rem]  w-full sm:w-4/6 -mt-2 text-textblack font-bold text-center tracking-tighter">
               And enjoy more for less.
             </h1>
 
