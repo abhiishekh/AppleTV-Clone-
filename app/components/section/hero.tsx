@@ -3,10 +3,11 @@
 import { Tv } from "lucide-react";
 import { Button } from "../button";
 import { Container } from "../Container";
-import img from "../../../public/images/napoleon.webp";
+import img from "@/public/images/airplane.webp";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
+import Image from "next/image";
 
 export const Hero = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,8 @@ export const Hero = () => {
         <img
           src={img.src}
           alt="hero image"
+          width={100}
+          height={100}
           className="w-full sticky top-0 object-cover h-[100vh]"
         />
       </motion.div>
@@ -43,10 +46,10 @@ export const Hero = () => {
           whileInView="visible"
           exit="hidden"
           animate="hidden"
-          viewport={{ amount: 0.8 }}
+          viewport={{ amount: 1 }}
           className="flex h-full flex-col justify-end items-start"
         >
-          <h1 className="text-4xl 3xl:text-6xl font-bold mb-10">
+          <h1 className="text-4xl 2 xl:text-6xl font-bold mb-10">
             All Apple Originals. <br /> Only On Apple TV+.
           </h1>
           <Button size="lg" className="mb-16">

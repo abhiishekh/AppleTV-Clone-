@@ -8,7 +8,7 @@ import {
   randomMoviesSet2,
 } from "@/app/movies";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState } from "react";
 import { useWindowSize } from "react-use";
 import { Button } from "../button";
 import { Play } from "lucide-react";
@@ -30,6 +30,8 @@ export const VideoCarousel = () => {
     },[width, height])
     const scale = useTransform(scrollYProgress, [0.3, 0.5, 0.66],[maxiMumScale * 1.15, maxiMumScale, 1])
 
+    const scaleMobile = useTransform(scrollYProgress, [0.3, 0.5, 0.66],[maxiMumScale * 0.45, maxiMumScale * .45, 1])
+
 
     const posterOpacity = useTransform(
         scrollYProgress,
@@ -44,14 +46,14 @@ export const VideoCarousel = () => {
         <div className="h-screen sticky top-0 mt-[-100vh] flex items-center justify-center">
 
         <div className="  w-full flex gap-4 3xl:gap-8 left-1/2 -translate-x-1/2">
-          <motion.div style={{opacity:posterOpacity}} className="shrink-0 aspect-video w-[60vw] rounded-2xl overflow-clip">
+          <motion.div style={{opacity:posterOpacity}} className="shrink-0 lg:aspect-video h-[70vh] lg:h-auto w-[60vw] rounded-2xl overflow-clip">
             <Image
               src={movies[0].poster}
               alt={movies[0].name}
               className="w-full h-full object-cover"
             />
           </motion.div>
-          <motion.div style={{scale}}  className="shrink-0 aspect-video w-[60vw] rounded-2xl overflow-clip">
+          <motion.div style={{ scale: width < 1024 ? scaleMobile : scale }}  className="shrink-0 aspect-video w-[60vw] rounded-2xl overflow-clip lg:scale-[scale]">
             <Image
               src={movies[1].poster}
               alt={movies[1].name}

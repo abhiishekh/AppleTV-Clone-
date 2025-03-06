@@ -14,7 +14,7 @@ export const Button = ({ children, size = "md", className }: Props) => {
   };
 
   return (
-    <button className={twMerge("bg-white text-textblack rounded-full font-sans", sizeClassNames[size], className)}>
+    <button className={twMerge("bg-white text-textblack rounded-full font-sans cursor-pointer", sizeClassNames[size], className)}>
       {children}
     </button>
   );
