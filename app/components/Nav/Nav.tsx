@@ -9,10 +9,10 @@ import { TbMenu } from 'react-icons/tb'
 import Link from 'next/link'
 
 const Nav = () => {
-  const [buttonSize, setButtonSize] = useState<"lg" | undefined>(undefined);
+  const [buttonSize, setButtonSize] = useState<"sm" | undefined>(undefined);
   useEffect(() => {
       const updateSize = () => {
-        setButtonSize(window.innerWidth >= 1536 ? "lg" : undefined);
+        setButtonSize(window.innerWidth >= 1536 ? undefined : "sm");
       };
   
       updateSize(); // Set initial size
@@ -67,7 +67,7 @@ const Nav = () => {
    <div className='bg-backgroundContrast text-white sticky py-1 -top-1 z-20'>
     <Container className='flex items-center min-h-11 justify-between'>
     <p className='text-xl'>Apple TV+ </p>
-    <Button size={window.innerWidth >= 1536 ? undefined : "sm"} >Stream now</Button>
+    <Button size={buttonSize} >Stream now</Button>
     </Container>
    </div>
     </>

@@ -64,7 +64,7 @@ export const Hero = () => {
           <h1 className="text-5xl 2xl:text-6xl font-bold mb-4 2xl:mb-10">
             All Apple Originals. <br /> Only On Apple TV+.
           </h1>
-          <Button size={window.innerWidth >= 1536 ? "lg" : undefined} className="mb-4 2xl:mb-10">
+          <Button size={buttonSize} className="mb-4 2xl:mb-10">
             Stream now
           </Button>
           <p className="font-semibold">
