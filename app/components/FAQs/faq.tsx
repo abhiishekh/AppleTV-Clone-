@@ -18,7 +18,7 @@ export const FAQ = () => {
       <Accordion type="single" collapsible>
         {FAQs.map((item, index) => (
           <AccordionItem key={index} value={item.question}>
-            <AccordionTrigger className="text-2xl sm:text-4xl text-textblack font-bold hover:no-underline my-4 sm:my-6 ">
+            <AccordionTrigger className="text-2xl sm:text-3xl text-textblack font-bold hover:no-underline my-1 sm:my-3 ">
               {item.question}
             </AccordionTrigger>
             <AccordionContent>

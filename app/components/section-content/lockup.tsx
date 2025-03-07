@@ -9,11 +9,11 @@ export const Lockup = () =>{
     return (
         <Container className="my-32 w-[87.5%] mx-auto">
         <div className="flex justify-center items-center ">
-            <Image src={appleTv} alt="appletv logo" width={100} height={100}/>
+            <Image src={appleTv} alt="appletv logo" className="object-contain" width={100} height={100}/>
         </div>
 
         <div className="w-full h-auto my-12 flex justify-center ">
-            <h1 className="text-4xl lg:text-7xl font-bold text-textblack text-center">Watch Apple TV+ anywhere
+            <h1 className="text-5xl 2xl:text-7xl font-bold text-textblack text-center">Watch Apple TV+ anywhere
             on the Apple TV app.</h1>
         </div>
 

@@ -29,7 +29,7 @@ export default function Home() {
         <Brands />
 
         {/* //question and answers  */}
-        <h1 className="text-[2.3rem]  w-full md:text-3xl xl:text-7xl font-bold text-center mt-28 mb-12 sm:mb-16 sm:mt-40">
+        <h1 className="text-[2.3rem]  w-full md:text-5xl 2xl:text-7xl font-bold text-center mt-28 mb-12 sm:mb-16 sm:mt-40">
           Questions? Answers.
         </h1>
         <div>

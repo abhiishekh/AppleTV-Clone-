@@ -1,5 +1,7 @@
+"use client"
+
 import { Search, ShoppingBag } from 'lucide-react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FaApple } from 'react-icons/fa'
 import { Container } from '../Container'
 import { Button } from '../button'
@@ -7,6 +9,19 @@ import { TbMenu } from 'react-icons/tb'
 import Link from 'next/link'
 
 const Nav = () => {
+  const [buttonSize, setButtonSize] = useState<"lg" | undefined>(undefined);
+  useEffect(() => {
+      const updateSize = () => {
+        setButtonSize(window.innerWidth >= 1536 ? "lg" : undefined);
+      };
+  
+      updateSize(); // Set initial size
+      window.addEventListener("resize", updateSize);
+      
+      return () => {
+        window.removeEventListener("resize", updateSize);
+      };
+    }, []);
   return (
     <>
    <header className='bg-backgroundContrast px-6 text-white  '>
@@ -22,7 +37,7 @@ const Nav = () => {
     </div>
 
     <div className='hidden md:block '>
-      <ul className='flex items-center gap-8 font-light text-gray-300  text-lg'>
+      <ul className='flex items-center gap-8 font-light text-gray-300 text-sm 2xl:text-lg'>
         <li>Store</li>
         <li>Mac</li>
         <li>ipad</li>
@@ -49,10 +64,10 @@ const Nav = () => {
 
 
 
-   <div className='bg-backgroundContrast text-white sticky py-2 -top-1 z-20'>
+   <div className='bg-backgroundContrast text-white sticky py-1 -top-1 z-20'>
     <Container className='flex items-center min-h-11 justify-between'>
     <p className='text-xl'>Apple TV+ </p>
-    <Button >Stream now</Button>
+    <Button size={window.innerWidth >= 1536 ? undefined : "sm"} >Stream now</Button>
     </Container>
    </div>
     </>

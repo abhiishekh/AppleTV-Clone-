@@ -5,10 +5,11 @@ import { Button } from "../button";
 import { Container } from "../Container";
 import img from "@/public/images/airplane.webp";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useEffect } from "react";
 
 export const Hero = () => {
+  const [buttonSize, setButtonSize] = useState<"lg" | undefined>(undefined);
   const videoContainerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -19,6 +20,18 @@ export const Hero = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 1], [1, 0.4, 0]); // Adjusted transform
 
   useEffect(() => {}, [scrollYProgress]);
+  useEffect(() => {
+    const updateSize = () => {
+      setButtonSize(window.innerWidth >= 1536 ? "lg" : undefined);
+    };
+
+    updateSize(); // Set initial size
+    window.addEventListener("resize", updateSize);
+    
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
+  }, []);
 
   return (
     <div className="relative  bg-background text-white">
@@ -36,7 +49,7 @@ export const Hero = () => {
         />
       </motion.div>
 
-      <Container className="relative z-10 top-0 left-0 h-[calc(100vh-174px)] pb-7">
+      <Container className="relative z-10 top-0 left-0 h-[calc(100vh-174px)]   ">
         <motion.div
           variants={{
             hidden: { opacity: 0 },
@@ -48,10 +61,10 @@ export const Hero = () => {
           viewport={{ amount: 0.8 }}
           className="flex h-full flex-col justify-end items-start"
         >
-          <h1 className="text-4xl 2 xl:text-6xl font-bold mb-10">
+          <h1 className="text-5xl 2xl:text-6xl font-bold mb-4 2xl:mb-10">
             All Apple Originals. <br /> Only On Apple TV+.
           </h1>
-          <Button size="lg" className="mb-16">
+          <Button size={window.innerWidth >= 1536 ? "lg" : undefined} className="mb-4 2xl:mb-10">
             Stream now
           </Button>
           <p className="font-semibold">
